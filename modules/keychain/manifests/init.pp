@@ -7,6 +7,12 @@ class keychain {
     group  => 'vagrant',
   }
 
+  file { '/home/vagrant/.ssh/config':
+    source => 'puppet:///modules/keychain/config',
+    owner   => 'vagrant',
+    group  => 'vagrant',
+  }
+
   file { '/home/vagrant/.ssh/puppet-deploy':
     source => 'puppet:///modules/keychain/puppet-deploy',
     owner   => 'vagrant',
