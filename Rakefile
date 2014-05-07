@@ -1,4 +1,4 @@
-SSH = 'ssh -A -l vagrant'
+SSH = 'ssh -i /home/jpratt/.vagrant.d/insecure_private_key -p 2222 -o StrictHostKeyChecking=no'
 
 desc "Run Puppet on ENV['CLIENT']"
 task :apply do
